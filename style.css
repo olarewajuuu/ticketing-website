@@ -1,0 +1,411 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: rgb(226, 226, 226);
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+.navlogo{
+    margin-left: -100px;
+}
+.navlogo img{
+    width: 80px;
+}
+.navitems ul{
+    display: flex;
+    margin-right: 100px;
+    gap: 50px;
+    list-style-type: none;
+    text-decoration: none;
+}
+.navitems ul a{
+    text-decoration: none;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    transition: all .5s linear;
+}
+
+/* =================== GENERAL ==================== */
+
+a{
+    text-decoration: none;
+}
+
+html{
+    font-size: 62%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+/* =================== START PAGE ==================== */
+/*---START HEADER--- */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+    background: white;
+    z-index: 1000;
+}
+
+header a {
+    color: rgb(63, 3, 202);
+    font-size: 2rem;
+    margin: 0 .8rem;
+}
+header a:hover {
+    color: rgb(163, 163, 179);
+}
+
+.navlogo img{
+    width: 80px;
+    margin-left: 100px;
+}
+
+
+
+header #meun-bar{
+    color: rgb(65, 6, 173);
+    font-size: 3rem;
+    border: .1rem solid rgb(44, 3, 226);
+    cursor: pointer;
+    border-radius: .5rem;
+    padding: .5rem 1.2rem;
+    display: none;
+
+}
+
+@media(max-width:990px){
+    html{
+        font-size: 50%;
+    }
+    /* START HEADER */
+    
+    header #meun-bar{
+        display: initial;
+    }
+
+    header .Nav-Link{
+        position: absolute;
+        top: 100%;
+        left:0;
+        right:0;
+        background:  rgba(29, 3, 175, 0.2);
+        border-top: .1rem solid rgba(39, 10, 201, 0.2);
+        padding: 1rem 2rem ;
+        clip-path: polygon(0 0 , 100% 0 , 100% 0 , 0 0);
+
+    }
+
+    header .Nav-Link.active{
+        clip-path: polygon(0 0 , 100% 0 , 100% 100% , 0 100%);
+
+    }
+    header .Nav-Link a {
+        display: block;
+        padding: 1.5rem;
+        margin: 1.5rem;
+        border-radius: .5rem;
+        background: rgba(12, 0, 78, 0.2);
+        color: #fff;
+    }
+
+}
+
+.hero_img img{
+    width: 100%;
+}
+
+.pop{
+    width: 100%;
+    margin: 0 auto;
+   
+}
+.pop_text{
+    text-align: center;
+    margin: 100px 0;
+}
+.pop_text h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.pop_text h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgb(156, 154, 154);
+}
+
+
+.container-pop{
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.image_box img{
+    width: 350px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.profil_details{
+    margin: 10px;
+}
+.profil_details h4{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.profil_details h5{
+    color: rgb(156, 154, 154);
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+.profil_details .btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.profil_details button{
+    padding: 10px 20px;
+    border: none;
+    background-color: blue;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+.gallery{
+    width: 1200px;
+    display: flex;
+    overflow-x: scroll;
+}
+.gallery .wrap{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+.gallery div .container-pop{
+    width: 100%;
+    filter: grayscale(0);
+    transition: transform 0.5s;
+}
+.gallery::-webkit-scrollbar{
+    display: none;
+}
+.gallery-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+#backBtn, #nextBtn{
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+#backBtn:hover, #nextBtn:hover{
+    opacity: 0.5;
+}
+
+.gallery div img:hover{
+    filter: grayscale(100%);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.subscribe-section{
+    width: 100%;
+    /* height: 400px; */
+    background-color: rgb(158, 158, 154);
+    padding: 30px 0;
+    margin-top: 100px;
+}
+.subscribe-section .subscribe-text{
+    text-align: center;
+    margin-bottom: 50px;
+    /* margin: 100px 0; */
+}
+.subscribe-section .subscribe-text h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.subscribe-section .subscribe-text h4{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.subscribe-section .subscribe-input{
+    text-align: center;
+    width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+.subscribe-section .subscribe-input input{
+    width: 600px;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+}
+.subscribe-section .subscribe-input input::placeholder{
+    padding: 20px;
+}
+.subscribe-section .subscribe-input button{
+    height: 26px;
+    width: 100px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+
+/* foooter */
+footer{
+    width: 100%;
+    background-color: blue;
+    color: #fff;
+    padding: 50px 0;
+}
+.footer{
+
+    display: flex;
+    justify-content: space-around;
+}
+.footer .about{
+    width: 500px;
+    
+}
+.footer .about-fele{
+    margin-bottom: 50px;
+}
+.footer .about-fele h3{
+    font-size: 25px;
+}
+.footer .about-fele p{
+    font-size: 12px;
+    line-height: 25px;
+}
+.about .social-link h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.about .social-link i{
+    color: #fff;
+    font-size: 25px;
+    margin-right: 15px;
+}
+.about .social-link i:hover{
+    color: #5cabec;
+}
+.footer .help-link{
+    width: 300px;
+}
+.footer .help-link h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.links{
+    display: flex;
+    gap: 50px;
+}
+.links a{
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+@media(max-width:990px){
+    .footer{
+        display: block;
+    } 
+    .footer .about{
+        width: 400px;
+        
+    }
+    .about .social-link{
+        margin-bottom: 50px;
+    }
+}
+
+
+.line{
+    background-color: #fff;
+    height: 2px;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.copyright i{
+    font-size: 15px;
+    margin-right: 10px;
+}
+.copyright p{
+    font-size: 15px;
+}
+
+
+
+
+.animateSlide {
+    animation: cardSlide 2s ease-in-out;
+  }
+
+  @keyframes cardSlide {
+    0% {
+      transform: translateX(300px);
+    }
+
+    10%,
+    80% {
+      transform: translateX(0px);
+    }
+
+    100% {
+      transform: translateX(-300px);
+    }
+  }
